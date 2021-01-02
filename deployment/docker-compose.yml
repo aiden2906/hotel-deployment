@@ -1,0 +1,43 @@
+version: '3'
+services:
+  dashboard:
+    restart: always
+    build: ../repository/web/.
+    image: hotel-web
+    container_name: hotel_dashboard
+    expose:
+    - 80
+
+  api:
+    restart: always
+    build: ../repository/server/.
+    image: hotel-server
+    container_name: hotel_api
+    environment:
+    - NODE_ENV=staging
+    volumes:
+    - ./staging.env:/app/staging.env
+    - ./staging.env:/app/.env
+    - ../repository/server/dump:/app/dump
+    - ./public:/app/public
+    expose:
+    - 3456
+    networks:
+      - postgresdb-staging
+      - default
+  nginx:
+    restart: always
+    image: nginx
+    container_name: hotel_nginx
+    ports:
+      - 4300:80
+    volumes:
+      - ./public:/var/www/public
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - api
+
+networks:
+  postgresdb-staging:
+    external:
+      name: postgresdb_default

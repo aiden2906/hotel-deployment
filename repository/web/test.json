@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Phòng hoa cải",
+    "roomId": 3,
+    "price": 250000,
+    "start": "Wed Oct 07 2020",
+    "end": "Thu Oct 08 2020",
+    "quantity": 1,
+    "id": "5add619c-a3b8-47cf-9dc6-67f9e1dd9c01"
+  },
+  {
+    "roomId": 6,
+    "name": "Phòng Gia Đình",
+    "price": 750000,
+    "start": "Wed Oct 07 2020",
+    "end": "Wed Oct 07 2020",
+    "quantity": 1,
+    "id": "5add619c-a3b8-47cf-9dc6-67f9e1dd9c02"
+  },
+  {
+    "roomId": 5,
+    "name": "Phòng hoa lài",
+    "price": 150000,
+    "start": "Wed Oct 14 2020",
+    "end": "Thu Oct 15 2020",
+    "quantity": 2,
+    "id": "5add619c-a3b8-47cf-9dc6-67f9e1dd9c03"
+  },
+  {
+    "roomId": 5,
+    "name": "Phòng hoa lài",
+    "price": 150000,
+    "start": "Wed Oct 07 2020",
+    "end": "Wed Oct 07 2020",
+    "quantity": 2,
+    "id": "5add619c-a3b8-47cf-9dc6-67f9e1dd9c04"
+  }
+]
